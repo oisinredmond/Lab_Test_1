@@ -7,15 +7,16 @@ class Stars
   float[] coordinates;
   float size;
   
-  Stars(TableRow line)
+  Stars(String line)
   {
-    String[] star = line.split(",");
-    hab = Integer.parseInt(star[2]);
-    displayName = star[3];
-    Distance = Float.parseFloat(star[12]);
-    coordinates[0] = Float.parseFloat(star[13]);
-    coordinates[1] = Float.parseFloat(star[14]);
-    coordinates[2] = Float.parseFloat(star[15]);
-    size = Float.parseFloat(star[16]);
+    String[] fields = line.split(",");
+    hab = Integer.parseInt(fields[2]);
+    displayName = fields[3];
+    distance = Float.parseFloat(fields[12]);
+    coordinates[0] = Float.parseFloat(fields[13]);
+    coordinates[1] = Float.parseFloat(fields[14]);
+    coordinates[2] = Float.parseFloat(fields[15]);
+    size = Float.parseFloat(fields[16]);
   }
+}
 }
